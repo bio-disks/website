@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}" class="text-decoration-none">首页</a></li>
+                    {{ if .Parent }}
+                    <li class="breadcrumb-item"><a href="{{ .Parent.RelPermalink }}" class="text-decoration-none">{{ .Parent.Title }}</a></li>
+                    {{ end }}
+                    <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+                </ol>
+            </nav>
+            
+            <!-- Article Header -->
+            <header class="mb-5">
+                <h1 class="display-5 fw-bold text-primary mb-3">{{ .Title }}</h1>
+                {{ if .Date }}
+                <div class="text-muted mb-3">
+                    <i class="fas fa-calendar me-2"></i>{{ .Date.Format "2006年01月02日" }}
+                </div>
+                {{ end }}
+                {{ if .Description }}
+                <p class="lead text-light">{{ .Description }}</p>
+                {{ end }}
+            </header>
+            
+            <!-- Article Content -->
+            <div class="article-content">
+                {{ .Content }}
+            </div>
+            
+            <!-- Article Footer -->
+            {{ if .Params.tags }}
+            <footer class="mt-5 pt-4 border-top border-secondary">
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="text-muted me-2">标签:</span>
+                    {{ range .Params.tags }}
+                    <span class="badge bg-primary">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </footer>
+            {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }} 

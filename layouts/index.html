@@ -1,0 +1,112 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero-section position-relative overflow-hidden">
+    <div class="container py-5">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-primary mb-4">
+                    <i class="fas fa-dna me-3"></i>DNA存储技术
+                </h1>
+                <p class="lead text-light mb-4">
+                    探索下一代数据存储技术，利用DNA分子的天然信息存储能力，实现超高密度、长期稳定的数据保存。
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="/technology/" class="btn btn-primary btn-lg">
+                        <i class="fas fa-microchip me-2"></i>了解技术
+                    </a>
+                    <a href="/news/" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-newspaper me-2"></i>最新动态
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dna-visualization text-center">
+                    <div class="dna-helix position-relative">
+                        <div class="dna-strand"></div>
+                        <div class="dna-strand delay-1"></div>
+                        <div class="dna-strand delay-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-bg"></div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card bg-dark border-primary h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title text-primary">超高密度存储</h5>
+                        <p class="card-text text-muted">
+                            1克DNA可存储约10^21字节数据，相当于约10亿TB的信息量
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark border-success h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                        <h5 class="card-title text-success">长期稳定性</h5>
+                        <p class="card-text text-muted">
+                            在适当条件下，DNA可保存数千年而不丢失信息
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark border-info h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-leaf fa-3x text-info mb-3"></i>
+                        <h5 class="card-title text-info">生物兼容性</h5>
+                        <p class="card-text text-muted">
+                            利用天然生物分子，环保且可持续的数据存储方案
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News Section -->
+<section class="py-5 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-5">
+                    <i class="fas fa-newspaper me-3 text-primary"></i>最新动态
+                </h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+            <div class="col-md-4">
+                <div class="card bg-dark border-secondary h-100">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <i class="fas fa-calendar me-1"></i>{{ .Date.Format "2006-01-02" }}
+                        </h6>
+                        <h5 class="card-title text-primary">{{ .Title }}</h5>
+                        <p class="card-text text-muted">{{ .Summary }}</p>
+                        <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">
+                            阅读更多 <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="text-center mt-4">
+            <a href="/news/" class="btn btn-primary">
+                查看所有动态 <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }} 
