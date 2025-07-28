@@ -1,20 +1,96 @@
 <footer class="bg-dark border-top border-secondary mt-5">
-    <div class="container py-4">
-        <div class="row">
-            <div class="col-md-6">
+    <div class="container py-5">
+        <!-- 主要内容区域 -->
+        <div class="row mb-4">
+            <div class="col-lg-4 mb-4">
                 <h6 class="text-primary mb-3">
                     <i class="fas fa-dna me-2"></i>Bio Disks
                 </h6>
-                <p class="text-muted small mb-0">
-                    DNA存储技术信息跟踪平台
+                <p class="text-light small mb-3">
+                    DNA存储技术信息跟踪平台，致力于收集、整理和分享DNA存储技术的最新发展动态。
                 </p>
-                <p class="text-muted small mb-0 mt-2">
+                <p class="text-light small mb-0">
                     <i class="fas fa-user me-1"></i>作者：<a href="{{ .Site.Params.author_url }}" class="text-decoration-none text-primary" target="_blank">{{ .Site.Params.author }}</a>
                 </p>
             </div>
+            
+            <div class="col-lg-4 mb-4">
+                <h6 class="text-primary mb-3">
+                    <i class="fas fa-sitemap me-2"></i>网站导航
+                </h6>
+                <ul class="list-unstyled text-light small">
+                    <li class="mb-2">
+                        <a href="{{ .Site.BaseURL }}" class="text-decoration-none text-light">
+                            <i class="fas fa-home me-1"></i>首页
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/technology/" class="text-decoration-none text-light">
+                            <i class="fas fa-microchip me-1"></i>技术原理
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/applications/" class="text-decoration-none text-light">
+                            <i class="fas fa-flask me-1"></i>应用场景
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/news/" class="text-decoration-none text-light">
+                            <i class="fas fa-newspaper me-1"></i>最新动态
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/about/" class="text-decoration-none text-light">
+                            <i class="fas fa-info-circle me-1"></i>关于我们
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <h6 class="text-primary mb-3">
+                    <i class="fas fa-link me-2"></i>相关链接
+                </h6>
+                <ul class="list-unstyled text-light small">
+                    <li class="mb-2">
+                        <a href="https://yanlinlin.cn/" class="text-decoration-none text-light" target="_blank">
+                            <i class="fas fa-globe me-1"></i>作者主页
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://github.com/bio-disks" class="text-decoration-none text-light" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://gohugo.io/" class="text-decoration-none text-light" target="_blank">
+                            <i class="fas fa-code me-1"></i>Hugo
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://getbootstrap.com/" class="text-decoration-none text-light" target="_blank">
+                            <i class="fab fa-bootstrap me-1"></i>Bootstrap
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 分隔线 -->
+        <hr class="border-secondary my-4">
+        
+        <!-- 底部信息 -->
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="text-light small mb-0">
+                    © {{ now.Year }} Bio Disks. 保留所有权利。
+                </p>
+            </div>
             <div class="col-md-6 text-md-end">
-                <p class="text-muted small mb-0">
-                    © {{ now.Year }} Bio Disks. 京ICP备18031542号-7
+                <p class="text-light small mb-0">
+                    <a href="https://beian.miit.gov.cn/" class="text-decoration-none text-light" target="_blank">
+                        京ICP备18031542号-7
+                    </a>
                 </p>
             </div>
         </div>
