@@ -1,42 +1,42 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-primary">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="{{ .Site.BaseURL }}">
-            <i class="fas fa-dna me-2 text-primary"></i>
-            <span class="fw-bold">Bio Disks</span>
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link {{ if .IsHome }}active{{ end }}" href="{{ .Site.BaseURL }}">
-                        <i class="fas fa-home me-1"></i>首页
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq .RelPermalink "/technology/" }}active{{ end }}" href="/technology/">
-                        <i class="fas fa-microchip me-1"></i>技术
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq .RelPermalink "/applications/" }}active{{ end }}" href="/applications/">
-                        <i class="fas fa-flask me-1"></i>应用
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq .RelPermalink "/news/" }}active{{ end }}" href="/news/">
-                        <i class="fas fa-newspaper me-1"></i>新闻
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq .RelPermalink "/about/" }}active{{ end }}" href="/about/">
-                        <i class="fas fa-info-circle me-1"></i>关于
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{{ .Site.BaseURL }}">
+      <i class="fas fa-dna me-2 text-primary"></i>
+      <span class="fw-bold">Bio Disks</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link {{ if .IsHome }}active{{ end }}" href="{{ .Site.BaseURL }}">
+            <i class="fas fa-home me-1"></i>首页
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ if eq .RelPermalink "/technology/" }}active{{ end }}" href="/technology/">
+            <i class="fas fa-microchip me-1"></i>技术
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ if eq .RelPermalink "/applications/" }}active{{ end }}" href="/applications/">
+            <i class="fas fa-flask me-1"></i>应用
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ if eq .RelPermalink "/news/" }}active{{ end }}" href="/news/">
+            <i class="fas fa-newspaper me-1"></i>新闻
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ if eq .RelPermalink "/about/" }}active{{ end }}" href="/about/">
+            <i class="fas fa-info-circle me-1"></i>关于
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav> 
