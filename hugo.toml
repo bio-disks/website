@@ -1,7 +1,6 @@
 baseURL = 'https://bio-disks.com/'
 languageCode = 'zh-cn'
 title = 'Bio Disks - DNA存储技术'
-theme = ''
 disableKinds = ['taxonomy', 'term']
 
 [params]
@@ -13,4 +12,4 @@ disableKinds = ['taxonomy', 'term']
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true 
+      unsafe = true
