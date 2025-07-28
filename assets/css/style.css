@@ -123,6 +123,39 @@ body {
     }
 }
 
+/* 建设图标动画 */
+.construction-animation {
+    animation: constructionRotate 2s infinite ease-in-out;
+}
+
+@keyframes constructionRotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+.construction-progress-bar {
+    animation: constructionProgress 3s infinite ease-in-out;
+}
+
+@keyframes constructionProgress {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 60%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
 /* 文章内容样式 */
 .article-content {
     font-size: 1.1rem;
